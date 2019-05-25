@@ -15,3 +15,4 @@ $_ex_haoft = array(
     'db-key' => 'imhaoft', // db配置, 为空则共用数据库
     'def-city' => 'linzhi', // 默认城市
 );
+

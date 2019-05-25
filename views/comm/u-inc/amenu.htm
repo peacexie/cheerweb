@@ -11,21 +11,17 @@ $isup = usrPerm::issup();
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{surl(0)}">{=$_cbase['sys_name']}</a>
+        <a class="navbar-brand" href="{surl(0)}">开心企业网</a>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
 
-          <li id="idf_about"><a href="{surl(about)}">企业介绍</a></li>
-          <li id="idf_news"><a href="{surl(news)}">新闻中心</a></li>
-          <li id="idf_cargo"><a href="{surl(cargo)}">产品中心</a></li>
-          <li id="idf_gbook"><a href="{surl(info-gbook)}">给我留言</a></li>
-          <li id="idf_alink"><a href="{surl(about-alink)}">联系我们</a></li>
-          <!--
-          <li id="idf_topic"><a href="{surl(topic)}">专题</a></li>
-          <li id="idf_faqs"><a href="{surl(faqs)}">问答</a></li>
-          -->
+          <li id="idf_about"><a href="{surl(about)}">介绍</a></li>
+          <li id="idf_news"><a href="{surl(news)}">新闻</a></li>
+          <li id="idf_cargo"><a href="{surl(cargo)}">产品</a></li>
+          <li id="idf_gbook"><a href="{surl(info-gbook)}">留言</a></li>
+          <li id="idf_alink"><a href="{surl(about-alink)}">联络</a></li>
 
         </ul>
 
@@ -33,16 +29,27 @@ $isup = usrPerm::issup();
 
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <span class="fa fa-user-circle"></span> 扩展 <span class="caret"></span>
+              <span class="fa fa-joomla"></span> 语言 <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <?php foreach($_cbase['part']['tab'] as $tk=>$tv){ ?>
+              <li id="idf_v{=$tk}"><a href='{surl("v$tk:0")}' target="_blank">{=$tk} : {=$tv}</a></li>
+              <?php } ?>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <span class="fa fa-modx"></span> 扩展 <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
 
-              <li id="idf_xxx"><a href="{=PATH_PROJ}/root/plus/api/redir.php?lang:cn&recbk={surl(home-tips)}" >扩展语言版本</a></li>
+              <li id="idf_xxx"><a href="{surl(base:home-tips)}" >扩展语言版本</a></li>
               
               <li class="divider"></li>
               
-              <li id="idf_xxx"><a href="https://github.com/peacexie/imcat/blob/patches/projs/imblog-READ.md" target="_blank">About:开心企业网(CheerWebs)</a></li>
-              <li id="idf_xxx"><a href="https://github.com/peacexie/imcat/blob/patches/projs/imblog-4.5.rar" target="_blank">Down:开心企业网(CheerWebs)</a></li>
+              <li id="idf_xxx"><a href="https://github.com/peacexie/cheerweb" target="_blank">关于:开心企业网</a></li>
+              <li id="idf_xxx"><a href="https://github.com/peacexie/cheerweb/archive/master.zip" target="_blank">下载:开心企业网</a></li>
               
               <li class="divider"></li>
 

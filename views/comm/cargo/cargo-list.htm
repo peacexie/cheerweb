@@ -2,9 +2,9 @@
 {php}
 $this->pmeta();
 eimp('initJs','jspop,jquery;bootstrap;comm;/base/assets/cssjs/sordbar');
-eimp('initCss','bootstrap,stpub;comm');
+eimp('initCss','bootstrap,stpub;comm'); // jsRelat:relpb;
 {/php} 
-<script src="{=PATH_BASE}?ajax-comjs&act=jsTypes:cargo,brand,hinfo;jsRelat:relpb;jsFields:cargo&cmod=brand"></script> 
+<script src="{=PATH_BASE}?ajax-comjs&act=jsTypes:cargo,brand,hinfo;jsFields:cargo&cmod=brand&_bdpart={=$_cbase['tpl']['bdpart']}"></script> 
 </head><body>
 {inc:"u-inc/ahead"}
 {inc:"u-inc/amenu"}
@@ -15,9 +15,9 @@ eimp('initCss','bootstrap,stpub;comm');
 
     <div class="sobar" id="sobar">
       <p><b>价格</b> <span id="soprice"></span></p>
-      <p><b>品牌</b> <span id="sobrand"></span></p>
+      <!--<p><b>品牌</b> <span id="sobrand"></span></p>-->
       <p><b>推荐</b> <span id="sohinfo"></span></p>
-       </div>
+    </div>
     <div class="sobar soline"> 
       <p class="order">
        <i id="so_def"></i>
@@ -65,10 +65,10 @@ var s,linktpl = "<a href='(url)' class='(act)'>(title)</a>";
 sordb_init('{=$this->mod}','{=$this->key}',0,'stype:brand,exp_*',linktpl);
 var atype = sordb_cfgs.slay.split(','), amtype = atype.length>=0 ? atype[0] : '(null)'; 
 
-s = sordb_relat(0,'brand-relpb-'+atype[atype.length-1],'act'); sordb_setLinks('sobrand',s);
+//s = sordb_relat(0,'brand-relpb-'+atype[atype.length-1],'act'); sordb_setLinks('sobrand',s);
 s = sordb_area(0,'price:10,100,200,300,500,800,1000:元','act'); $('#soprice').html(s);
 s = sordb_extype(0,'hinfo-0','act'); $('#sohinfo').html(s);
-sordb_fexts('sobar',0,'act');
+//sordb_fexts('sobar',0,'act');
 
 s = sordb_ordby(0,'默认','','def-act,def,(def)'); $('#so_def').html(s);
 s = sordb_ordby(0,'点击','click','oasc,odesc,ondesc,'); $('#so_click').html(s);

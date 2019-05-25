@@ -44,14 +44,3 @@
 .home-keres i, .home-keres b
 { font-style:normal; display:inline-block; margin:10px; }
 
-
-.home-keres { padding:10px 0px 0px 12px; }
-.home-keres dl { height:170px; }
-.home-keres dl.right { margin:0px 0px 10px 0px; }
-.home-keres dl:hover { border-top:1px solid #66F; border-bottom:1px solid #66F; }
-.home-keres dt { text-align:center; padding:5px 0px; margin:5px 0px 10px 0px; border-bottom:1px dashed #D8D8D8; }
-.home-keres p.img { width:50%; height:120px; display:inline-block; float:left; text-align:center; }
-.home-keres p.detail { width:50%; height:120px; display:inline-block; float:left; 
-    display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden; }
-.home-keres dd { }
-

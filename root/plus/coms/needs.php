@@ -29,7 +29,7 @@ $data = $dop->fmv; //dump($data);
 
 // cookie
 $gpnum = empty(intval($cfgs['ippub'])) ? 1 : intval($cfgs['ippub']);
-$ckey = "need_{$fm['part']}_{$fm['lpid']}";
+$ckey = "need_{$fm['part']}_{$fm['pid']}";
 $stamp = $_SERVER["REQUEST_TIME"];
 $glife = intval($gpnum)*60;
 $ck = comCookie::mget('needs',$ckey); // cookie;
@@ -60,7 +60,7 @@ if($msg){
 
 
 // mtel重复
-$whr = "part='$fm[part]' AND lpid='$fm[lpid]' AND mtel='$fm[lpid]'";
+$whr = "part='$fm[part]' AND pid='$fm[pid]' AND mtel='$fm[mtel]'";
 $whr .= " AND atime>'".($_SERVER["REQUEST_TIME"]-86400)."'";
 $ord = "ORDER BY cid DESC";
 $rp = $db->table('coms_need')->where($whr)->find();

@@ -40,7 +40,7 @@ class homeCtrl{
     function homeAct(){
         // header('Location:?user');
         $lang = \imcat\comCookie::oget('lang');
-        $key = in_array($lang,array('en','cn')) ? $lang : 'cn';
+        $key = 'en'; //in_array($lang,array('en','cn')) ? $lang : 'cn';
         $vars['lang'] = $lang;
         return array('newtpl'=>"home/home-$key",'vars'=>$vars);
     }

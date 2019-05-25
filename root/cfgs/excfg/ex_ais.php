@@ -3,9 +3,9 @@
 $_ex_ais = array(
     // 百度-翻译
     'fanyi' => array(
-        'id' => '******', // AppID
+        'id' => '20190402000283653', // AppID
         //'ak' => '',
-        'as' => '******',
+        'as' => 'wpGRn_NDcXmDJZKPtWFl',
         '_tab' => array( // 语言包key => 百度Api-key, 相同的注释掉
             'cn'=>'zh', //'en'=>'en', // 汉,英
             'fr'=>'fra', 'es'=>'spa', //'ru'=>'ru', // 法,西,俄

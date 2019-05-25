@@ -11,6 +11,7 @@ p i.r{ float:right; color:#999; }
 .gwidth{ width:760px; display:block; margin:0px auto; clear:both; }
 .ie6{ color:#F00; background-color:#FFC; text-align:center; padding:10px 0; padding:10px 0px; }
 .clear { clear:both; }
+.tc { text-align:center; }
 
 
 .nav{ text-align:center; font-size:larger; padding:20px 0 0 0; }

@@ -14,11 +14,7 @@ $_va_home = array(
             //'gbook' => 'nrem', // gbook按nrem方式显示
             'crem' => 'nrem', 
             'trem' => 'nrem',
-            'kerem' => 'nrem',
             'drem' => 'nrem',
-            'company' => 'corp', 
-            'govern' => 'corp', 
-            'organize' => 'corp', 
         ),
         'extra' => array(), // 'type','suite' 扩展模块:'home','info','type','ocar'
     ),

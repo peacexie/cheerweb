@@ -22,34 +22,48 @@ $_sy_vopcfg['tpl'] = array(
         '/root/run/adm.php',
     ),
     'comm' => array(
-        '房产网',
-        '/home.php',
+        '中文版',
+        '/vcn.php',
         //'/', // 伪静态配置：把`.php?` ->替换为 `/`
         //'.htm', // 伪静态后缀
     ), 
-    /*'mob' => array(
-        array('cn'=>'手机版', 'en'=>'Mobile'),  
-        '/mob.php'
-    ),*/
-    'umc' => array(
-        array('cn'=>'会员中心', 'en'=>'User'),
-        '/root/run/umc.php'
+    // --- ex:start
+    'ven' => array(
+        'English',
+        '/ven.php',
     ), 
-    /*'rest' => array(
-        'REST-API', 
-        '/root/run/rest.php'
-    ),*/
-    #'demo' => array('Hello.Demo!','/root/run/demo.php'), 
+    'vfr' => array(
+        'Française',
+        '/vfr.php',
+    ), 
+    'vru' => array(
+        'Русский',
+        '/vru.php',
+    ), 
+    'ves' => array(
+        'Español',
+        '/ves.php',
+    ), 
+    /*
+    'vjp' => array(
+        '日本語',
+        '/vjp.php',
+    ), 
+    'vkr' => array(
+        '한국어',
+        '/vkr.php',
+    ),
+    */
+    // --- ex:end
     'base' => array(
         array('cn'=>'默认首页', 'en'=>'Basic'),
         '/index.php', // index,base
     ),
-    //'ven' => array('English','/root/run/eng.php'), 
 );
 
 // 各模块展示show
 $_sy_vopcfg['show'] = array( 
-    //'comm' => array('',''), // topic,faqs
+    //'chn' => array('',''), // topic,faqs
     //'doc' => array(''),
     'dev' => array('demo'), 
     'umc' => array('indoc'), 

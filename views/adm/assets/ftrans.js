@@ -14,7 +14,10 @@ function resetList(part, elm){
         if(part=='imcat') $(tr).hide();
         var fp = $(tr).find('a').eq(0).text(),
             url = $(tr).find('a').eq(1).prop('href');
-        if(fp.indexOf('.maobak')>0) return true;
+        if(fp.indexOf('.maobak')>0){
+            //$(tr).hide();
+            return true;
+        } 
         if(part=='imcat' && fp.indexOf('-'+ev)>0){
             $(tr).show();
         } // 

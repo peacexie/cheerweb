@@ -14,7 +14,8 @@ a.cur { color: #C00; }
 .head-h1 small{ overflow:hidden; text-overflow:ellipsis; }
 @media only screen and (max-width:540px){ .head-h1 small span{ display:none; } }
 
-.foot { width:100%; max-width:1140px; margin:20px auto; padding: 10px 0px; clear: both; text-align: center; background-image: url(./views/base/assets/aimg/dg.gd.png); background-position: 0px -140px; }
+.foot { width:100%; max-width:1140px; margin:20px auto; padding:10px 0px; clear:both; text-align: center; background-image: url(./views/base/assets/aimg/dg.gd.png); background-position: 0px -140px; }
+.foot p { line-height:180%; }
 .foot p.note, .foot p.copy, .foot p.info { font-size:small; color:#666; }
 .foot p.note { color:#963; }
 .foot .fnav { padding: 10px 0px 5px 0px; }
@@ -217,15 +218,6 @@ div.bdsharebuttonbox {  }
 .mpic_out .cntout { }
 .mpic_out .seltype { width:120px; float:right; }
 
-.keres-table { border-top:1px dashed #CCC; }
-.keres-table td { padding:2px 2px; }
-.keres-table td:hover { background:#FFC; }
-.keres-table i { font-style: normal; display: inline-block; }
-.keres-table .title { height:50px; font-size:large; }
-.keres-table .resume { color:#666; padding:1px 1px; margin:1px 1px; border-bottom:1px dashed #CCC; }
-
-.keres-vdo { width:640px; margin:10px auto; }
-.keres-down { width:640px; text-align:center; padding:10px; margin:10px auto; border:1px dashed #CCC; }
 
 .pg_bar{ margin:auto; text-align:center; }
 .pg_bar .pagination li a{ margin:0 5px; }
@@ -235,23 +227,4 @@ div.bdsharebuttonbox {  }
     .pg_first>a{ border-top-left-radius:4px; border-bottom-left-radius:4px; }
     .pg_last>a { border-top-right-radius:4px; border-bottom-right-radius:4px; }
 }
-
-
-.ocar-tbar { width:99%; background:#EEE; padding:5px 10px; margin:5px 0px 10px 2px; border:1px solid #CCC; }
-
-.ocar_items { width:99%; padding:5px 10px; margin:10px 0px 10px 2px; border:1px solid #CCC; }
-.ocar_items td, .ocar_items th { padding:3px 5px; line-height:120%; white-space:nowrap }
-.ocar_items th { background:#EEE; }
-.ocar_items td.toinvoce { padding:3px 10px; }
-
-.ocar_invoce { width:720px; margin:10px auto 10px auto; }
-.ocar_invoce .tbar { background:#EEE; padding:5px 10px; margin:5px 0px 10px 2px; border:1px solid #CCC; }
-.ocar_invoce table { width:100%; margin:10px auto 10px auto; }
-
-.ocar_logo{ width:720px; border:1px solid #CCC; padding:2px; margin:10px auto; font-size:14px; }
-
-.ocar_logo .logo{ width:120px; height:60px; padding:5px; float:right; background-image:url(./views/base/assets/logo/logo120x60.jpg); background-position:center; background-repeat:no-repeat; }
-.ocar_logo .title{ width:450px; height:60px; padding:5px; float:left; }
-.ocar_logo h3{ font-size:18px; text-align:center; color:#333; padding:1px; margin:1px;}
-.ocar_logo h1{ font-size:14px; color:#09C; padding:0px 5px; margin:1px;}
 
