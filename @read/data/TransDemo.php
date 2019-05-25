@@ -14,6 +14,8 @@ $part = 'fanyi'; // all, trans, yuyan, fanyi
 
 if($part=='all' || $part=='trans'){
 
+// 把文件：flow-ru.php 从俄语翻译成日语
+//$res = devBuild::trsfp(DIR_ROOT.'/extra/kvphp/flow-ru.php', 'jp', 'ru');
 
 $res = devBuild::trsfp(DIR_ROOT.'/extra/kvphp/flow-jp.php', 'jp');
 $res = devBuild::trsfp(DIR_ROOT.'/extra/ucfgs/cfglibs-jp.php', 'jp');
