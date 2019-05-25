@@ -24,7 +24,7 @@ CheerWeb(开心企业站) ... 开发中...
 配置/安装
 
 * 配置：修改数据库配置：
- - 文件：/root/cfgs/boot/cfg_db.php；
+  - 文件：/root/cfgs/boot/cfg_db.php；
 * 访问起始页：/index.php?start 检查配置；
 * 访问地址：/root/tools/setup/ 安装程序。
 
