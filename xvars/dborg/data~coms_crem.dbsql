@@ -1,0 +1,11 @@
+
+-- coms_crem@2019-05-25 08:34:28 -- 
+INSERT INTO `{pre}coms_crem{ext}` VALUES 
+('2015-a4-ahx1','1','发货太慢！','产品可以，发货太慢！','Peace','1','2015-97-dad1','127.0.0.1','1443926140','peace','127.0.0.1','1443926140','peace'),
+('2015-a9-ncy1','1','aaasa','aaaaaaaaaaaaaaaa','TTTTTTTT','1','2015-8z-h0g1','127.0.0.1','1444393645','peace','127.0.0.1','1444393645','peace'),
+('2015-ck-ncu1','1','dsxsddssd','dsdsdsdsds','Peace','1','2015-9g-n7s1','127.0.0.1','1450441618','hepinggepeacece221200','127.0.0.1','1450441618','hepinggepeacece221200'),
+('2018-bt-fcfr','1','aaaaaAAAAAAA','AAAAAAAAAAAAAAAAAAA','AAAAAAAAA','1','2015-97-dad1','127.0.0.1','1543127162','peace','127.0.0.1','1543127162','peace'),
+('2019-5k-992k','1','ddddddddddddddddd','dddddddddddddddd','ddddddd','1','2015-9c-h3h1','127.0.0.1','1558142351','peace','127.0.0.1','1558142351','peace'),
+('2019-5n-mtfu','1','SDSDSDSDSD','DSDSDSDSDSDSDS','DDSSDSD','1','2015-94-7s91','127.0.0.1','1558353379','peace','127.0.0.1','1558353379','peace'),
+('2019-5n-n05g','1','ddddddddddddddddd','dddddddddddddddddddd','ddddddddddd','1','2015-94-7s96','127.0.0.1','1558353608','peace','127.0.0.1','1558353608','peace'),
+('2019-5n-n1g7','1','DDDDDDDDDDDDDDDDDDD','DDDDDDDDDDDDDDDD','Peace','1','2015-8y-njj3','127.0.0.1','1558353786','peace','127.0.0.1','1558353786','peace');
