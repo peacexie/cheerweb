@@ -1,0 +1,55 @@
+<!DOCTYPE html><html><head>
+{php $this->pmeta('站点导航'); }
+{php}
+eimp('initJs','jquery;bootstrap;comm');
+eimp('initCss','bootstrap,stpub;comm;info'); 
+{/php}
+</head><body>
+{inc:"u-inc/ahead"}
+{inc:"u-inc/amenu"}
+
+
+<div class="row">
+  <div class="col-md-9">
+    <!--div class="info-tbar">
+    <i>навигация по сайту</i>
+    <i class="right">
+    <a href="#">подзаголовок (категория) Нет</a>
+    </i>
+    </div-->
+    <div class="row">
+    <!--main_start-->
+
+    {loop array('about','news','cargo') $mod}
+    <div class="col-md-4">
+    <ul class="info-nav">
+      <li class="type"><a href="{surl($mod,-);}">{=$mod}:{=$_groups[$mod]['title']}</a></li>
+      {tag:about=[Type][modid,$mod][idfix,top]}
+      <li><a href="{surl("$mod-$t_kid")}">{=$t_kid},{=$t_title}</a></li>
+      {/tag:about}
+    </ul>
+    </div>
+    {/loop}
+
+    <div class="col-md-4">
+    <ul class="info-nav">
+    <li class="type">info:Расширенная информация</li>
+    <li><a href="{surl(info)}">навигация по сайту</a></li>
+
+    <li><a href="{surl(info-gbook)}">обратная связь по вопросу</a></li>
+    <li><a href="{surl(about-alink)}">связаться с нами</a></li>
+    </ul>
+    </div>
+
+    <!--main_end-->
+    </div>
+  </div>
+  <div class="col-md-3">
+    {inc:"info/a-side"}
+  </div>
+</div>
+
+{inc:"u-inc/afoot"} 
+
+</body></html>
+

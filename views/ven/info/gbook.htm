@@ -1,0 +1,97 @@
+<?php
+$_groups = read('groups');
+$modid = 'gbook';
+$mtitle = $_groups[$modid]['title'];
+?>
+<!DOCTYPE html><html><head>
+{php $this->pmeta($mtitle); }
+{php}
+eimp('initJs','jquery;bootstrap;comm');
+eimp('initCss','bootstrap,stpub;comm');
+eimp('/layer/layer.js','vendui');
+{/php} 
+
+</head><body>
+{inc:"u-inc/ahead"}
+{inc:"u-inc/amenu"}
+
+
+<div class="row">
+  <div class="col-md-9">
+    <!--div class="info-tbar">
+    <i>站点导航</i>
+    <i class="right">
+    <a href="#">子标题(类别)有没有</a>
+    </i>
+    </div-->
+    <div class="row">
+    <!--main_start-->
+    <h1 class="news_title">
+        GuestBook
+    </h1>
+    <div class="news_rem">
+      <div class="rembar"> 
+      <span class="remadd">GuestBook(<i id="jsid_count_{=$modid}:0">0</i>) &nbsp; <a {php vopCell::vOpen($modid); }>&gt;&gt;Pub.</a></span> 
+      <span class="remtitle">Remark-Lits</span> 
+      </div><!--[cache,60]-->
+      {tag:nrlist=[Page][modid,$modid][keywd,0,title+detail][limit,50]}
+      {:row}
+      <dl>
+        <dt>{title($t_title,48,$v)} </dt>
+        <dd>
+        {text($t_detail,2400)}
+        <p>
+        <li class="tr">{=$t_mname} &nbsp; Publish:<i class="atime">{stime($t_atime,min)} </i></li>
+        {if !empty($t_reply)}<span class="fB c00F">Re:{stime($t_etime,min)}</span>{/if}
+        </p>
+        </dd>
+        <dd>
+        {text($t_reply,2400)}
+        </dd>
+      </dl>
+      {/row}
+      <div class="clear"></div>
+      {php echo $_cbase['page']['bar']; }
+      {/tag:nrlist}
+    </div>
+    <div class="clear"></div>
+    <!--main_end-->
+    </div>
+  </div>
+  <div class="col-md-3">
+    <!--rem_side_start-->
+    <div class="h10">&nbsp;</div>
+    <div class="sd-so01">
+    <form method="get" action="{surl(0:0)}">
+    <input name="mkv" type="hidden" value="{=$this->mkv}">
+    <input name="pid" type="hidden" value="{=$pid}">
+    <input name="keywd" type="text" id="keywd" class="w150" />
+    <input type="submit" id="sobtn" value="Search" />
+    </form>
+    </div>
+    <div class="sd-adv60"> 
+        <span id='jsid_advs_adpic_250x60a'><!--adpic:a2018--></span>
+    </div>
+
+    <div class="h10">&nbsp;</div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">Latest</div>
+      <div class="panel-body side">
+        {tag:hinfs=[List][modid,$modid][limit,10]}
+        <li class="type"><a href="#">{title($t_title,20,$v)}</a></li>
+        {/tag:hinfs}
+      </div>
+    </div>
+
+    <div class="sd-adv60"> 
+        <span id='jsid_advs_adpic_250x60b'><!--adpic:a2020--></span>
+    </div>
+    <!--rem_side_end-->
+  </div>
+</div>
+
+
+{inc:"u-inc/afoot"}
+</body></html>
+

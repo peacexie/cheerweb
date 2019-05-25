@@ -1,0 +1,70 @@
+
+<?php
+$isup = usrPerm::issup();
+?>
+
+  <nav class="navbar navbar-default"><!--default,inverse-->
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{surl(0)}">Joyeux Site Web</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+
+          <li id="idf_about"><a href="{surl(about)}">Présentation</a></li>
+          <li id="idf_news"><a href="{surl(news)}">Information</a></li>
+          <li id="idf_cargo"><a href="{surl(cargo)}">Produits</a></li>
+          <li id="idf_gbook"><a href="{surl(info-gbook)}">Message</a></li>
+          <li id="idf_alink"><a href="{surl(about-alink)}">Liaison</a></li>
+
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <span class="fa fa-joomla"></span> Langue <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <?php foreach($_cbase['part']['tab'] as $tk=>$tv){ ?>
+              <li id="idf_v{=$tk}"><a href='{surl("v$tk:0")}' target="_blank">{=$tk} : {=$tv}</a></li>
+              <?php } ?>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <span class="fa fa-modx"></span> Extension <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+
+              <li id="idf_xxx"><a href="{surl(base:home-tips)}" >Extensible language</a></li>
+              
+              <li class="divider"></li>
+              
+              <li id="idf_xxx"><a href="https://github.com/peacexie/cheerweb" target="_blank">Sur:Joyeux Site Web</a></li>
+              <li id="idf_xxx"><a href="https://github.com/peacexie/cheerweb/archive/master.zip" target="_blank">Télécharger:Joyeux Site Web</a></li>
+              
+              <li class="divider"></li>
+
+              <li id="idf_xxx"><a href="http://imcat.txjia.com" target="_blank">Go:Chat(imcat)</a></li>   
+              <li id="idf_xxx"><a href="http://imblog.txjia.com/home.php?ftree" target="_blank">Arbre de famille</a></li>
+
+              {if $isup}
+              <li role="separator" class="divider"></li>
+              <li id="idf_login"><a class="cF0F" href="{surl(adm:0)}?logout&recbk=ref" target="_blank" title="Se connecter超管">Se connecter:Admin</a></li>
+              {/if}
+            </ul>
+          </li>
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+

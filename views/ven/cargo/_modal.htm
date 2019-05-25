@@ -1,0 +1,125 @@
+
+
+<style type="text/css">
+    label{ font-weight:normal; padding:0.2rem 1rem 0.2rem 0; }
+    input[checkbox]{ vertical-align:middle; }
+    td{ padding:0.5rem; }
+    .modal.in .modal-dialog { z-index:5600; }
+    .nowrap{ 
+        text-align:right; padding:0 1.0rem; 
+        word-break:break-all; white-space:nowrap; word-wrap:keep-all; }
+    .fmneed{ max-width:150px; display:inline-block; }
+    .alertp{ position:relative; }
+    .alert{ position:absolute; display:inline-block !important; top:-40px; right:20px; }
+</style>
+
+
+<?php
+$tcfg = read('need.f');
+$cbstr = \imcat\basElm::setCBox('ntype',$tcfg['ntype']['cfgs'],'');
+?>
+
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myMLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myMLabel">
+                    Want Buy-Submit
+                </h4>
+            </div>
+            <div class="modal-body"><!--按下 ESC 按钮退出。-->
+                <div class="alertp" style="display:none">
+                    <div class="alert alert-success" role="alert">Tips</div>
+                </div>
+                <form id="nform" action="#" method="post">
+                    <table width="100%" border="0">
+                        <tr>
+                            <td class="nowrap">Product:</td>
+                            <td>
+                                {=$title}
+                                <input name="fm[part]" value="{=$this->mod}" type="hidden">
+                                <input name="fm[pid]" value="{=$did}" type="hidden">
+                                <input name="fm[title]" value="{=$title}" type="hidden">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">Items:</td>
+                            <td>{=$cbstr}</td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">Tel/Name:</td>
+                            <td>
+                        <label class="lab1"><input name="fm[mtel]" class="form-control fmneed" type="text" placeholder="Tel" maxlength="15"></label>
+                        <label class="lab2"><input name="fm[mname]" class="form-control fmneed" type="text" placeholder="Name" maxlength="15"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">Remark:</td>
+                            <td>
+                                <textarea name="fm[detail]" id="fm_detail" class="form-control" placeholder="Details">Unit-Price:{=$price}, Count:1 PCS</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="nowrap">Verify Code:</td>
+                            <td>
+                                <script>fsInit('fmneed','-192,25','form-control fmneed');</script>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="nsend()">Submit</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<script>
+
+var cmod = '{=$this->mod}',
+    ajurl = "{=PATH_ROOT}/plus/coms/needs.php";
+
+function omodal(e) {
+    $('#myModal').modal({});
+    $('.advFlag ').hide();
+}
+
+function nsend(){  
+    $.ajax({
+        type: "POST", dataType: "json", url: ajurl, 
+        data: $('#nform').serialize(),
+        success: function (res) { //jsLog(res);
+            if(res.error){
+                nmsg("error2: "+res.msg, 'warning');
+            }else{
+                nmsg("ok:提交成功!", 'success');
+            }
+        },
+        error: function(res, status) { //jsLog(res);
+            nmsg("error1: ["+status+"]"+res.responseText, 'warning');
+         }
+    }); //jsLog($('#nform').serialize());
+}
+
+function nmsg(msg, style){
+    $('.alertp>div').html(msg);
+    $('.alertp').show();
+    setTimeout(function(){
+        $('.alertp').hide(456);
+        if(style=='success'){
+            $('#fmneed_vimg').trigger('click');
+            $('#myModal').modal('hide');
+            $('.fmneed').val('');
+            $('.rdcb').prop('checked',false);
+            $('.fs_vimg_close').trigger('click');
+        }
+    }, 1300); // success,warning
+}
+
+</script>

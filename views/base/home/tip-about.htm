@@ -1,0 +1,26 @@
+
+<h3>CheerWeb(开心企业网)</h3>
+<ul>
+  <li>基于<a href="http://imcat.txjia.com/" target="_blank">贴心猫</a>二次开发，
+    免费，开源，无加密，无限制；</li>
+  <li>包含：公司介绍，新闻，产品，留言，评论，订购意向 等模块；</li>
+  <li>包含：{loop $vcfg $k $v}<?=basLang::pick(0,$v[0]); ?>，{/loop} 
+    等多语言展示。</li>
+</ul>
+
+<h4>各版本入口</h4>
+<ul>
+  {loop $vcfg $k $v}
+  <li>
+    <a class="right" href="{=PATH_PROJ}{=$v[1]}"><?php echo basLang::pick(0,$v[0]); ?></a>
+    {=$_dtab[$k]}
+  </li>
+  {/loop}
+</ul>
+
+<h4>了解我们</h4>
+<ul>
+  <li><a href="#">{=$title} @ GitHub</a></li>
+  <li><a href="#">{=$title} @ Official</a></li>
+  <li><a href="#">{=$title} @ Download</a></li>
+</ul>

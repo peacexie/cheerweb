@@ -1,0 +1,20 @@
+{imp:"about/about-alayout"}<!--模板继承-->
+
+{block:mcont}
+    <div class="news-tbar">
+    <i>о нас</i>
+    <i class="right">
+     {sopt($catid,$this->mod,0,$null)} &gt;&gt;
+    </i>
+    </div>
+    <h1 class="news_title">{title($title,96,$this->vars)}</h1>
+    <div class="news_bar"> публиковать:<i class="atime">{stime($atime,min)}</i> &nbsp; 
+      щелчок<i id="jsid_field_{=$this->mod}:{=$did}:click">{=$click}<!--,add1--></i>порядок &nbsp; 
+      </div>
+    <div class="news_text"> {html($detail)} </div>
+    <div class="clear"></div>
+
+{/block:mcont}
+ 
+
+
