@@ -12,6 +12,7 @@ eimp('initJs','jquery;comm;/base/home/funcs');
 <base target="_blank"/>
 </head>
 <body>
+<div id="topMargin" style="display:none; border:0px solid #999;"></div>
 
 <!--[if lt IE 9]>
 <p class='gwidth ie6'>浏览器版本太低，不支持HTML5，浏览效果可能不正常！</p>
@@ -65,6 +66,10 @@ $(function(){
         qrActs();
     }
 });
+$(function(){
+    winAutoMargin('topMargin');
+    $('.login-head p').width($('.topmsg').outerWidth());
+})
 </script>
 
 </body>
