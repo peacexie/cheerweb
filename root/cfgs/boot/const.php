@@ -3,7 +3,7 @@
 /// 参数配置-根据需要配置 -----------------------------------------------
 
 // 系统参数
-$_cbase['sys']['sn']      = '31b93757-975e-czyx-xmao-2019-5t8gd0'; // 序列号
+$_cbase['sys']['sn']      = '0BAB703D-127A-B479-1979-2010-0424X888'; // 序列号
 $_cbase['sys']['ver']     = '4.8'; // 版本号
 $_cbase['sys']['cset']    = 'utf-8';// 系统编码
 $_cbase['sys']['tmzone']  = '8'; //
@@ -37,7 +37,7 @@ $_cbase['tpl']['tpc_on']  = 0; //是否开启模板缓存，true开启,false不�
 $_cbase['tpl']['tpc_ext'] = '.cac_php'; //模板缓存后缀,一般不需要修改 
 $_cbase['tpl']['no_static'] = '(adm)'; //,umc
 $_cbase['tpl']['def_static'] = 'comm';
-$_cbase['tpl']['mob_tpls'] = '(mob)'; //,app
+$_cbase['tpl']['mob_tpls'] = '(mob,comm,ven,vfr,vru,ves)'; //,app
 
 // server
 $_cbase['server']['txmao']  = 'http://imcat.txjia.com'; //txmao首页{svrtxmao}

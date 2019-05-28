@@ -40,7 +40,6 @@ if(!empty($bsend)){
         glbHtml::fmae_row(lang('vcode'),"<script>fsInit('fmcomadd','5,5','txt w80');</script>");
         glbHtml::fmae_send('bsend',lang('submit'),0,'tr');
     }
-
 }
 
 

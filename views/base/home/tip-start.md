@@ -19,9 +19,10 @@
 * 访问起始页：/index.php?start 检查配置；
 * 访问地址：/root/tools/setup/ 安装程序。
 
-<nav>
-  <ul class="pager">
-    <li><a href="./index.php">Homepage</a></li>
-    <li><a href="http://imcat.txjia.com/dev.php?start" target="imcat">更多:贴心猫文档</a></li>
-  </ul>
-</nav>
+#### 相关链接
+
+* [GitHub](https://github.com/peacexie/cheerweb) - 
+  [Official/演示站](http://qiyeweb.dongguan.net.cn/) - 
+  [Download](https://github.com/peacexie/cheerweb/archive/master.zip)
+* [Homepage](./index.php) # 
+  [更多:贴心猫文档](http://imcat.txjia.com/dev.php?start)
