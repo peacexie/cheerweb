@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html><html><head>
 {code:"home/cfgs.php"}
-{php $this->pmeta('文档 - DIY'); }
+{php $this->pmeta('入门文档 - DIY'); }
 {php}
 eimp('initJs','jquery');
 eimp("/bootstrap/css/bootstrap.min.css",'vendui'); 
@@ -23,12 +23,18 @@ eimp("/bootstrap/css/bootstrap.min.css",'vendui');
       多语言DIY
     </li>
     <li class="hidden-xs"><a href="{=PATH_PROJ}">{=$title}</a></li>
-    <li><a href="#">文档</a></li>
+    <li><a href="http://imcat.txjia.com/dev.php" target="_">入门文档</a></li>
   </ol>
 
   <div class="row">
     <div class="col-sm-6">
       {inc:"home/tip-about"}
+      <nav>
+        <ul class="pager">
+          <li><a href="http://imcat.txjia.com/dev.php?info-help" target="_blank">捐赠贡献</a></li>
+          <li><a href="http://imcat.txjia.com/dev.php?info-service" target="_blank">为您服务</a></li>
+        </ul>
+      </nav>
     </div>   
     <div class="col-sm-6">
       {=$texts['start']}

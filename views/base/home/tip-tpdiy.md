@@ -36,9 +36,9 @@
 导航首页相关文件目录
 
 * /views/base/home/              - 首页相关 总目录
-* /views/base/home/home-en.htm   - 首页模板(英文版)
-* /views/base/home/home-cn.htm   - 首页模板(中文版，预留)
-* /views/base/home/layout.htm    - 首页布局
+* /views/base/home/en.htm        - 首页模板(英文版)
+* /views/base/home/cn.htm        - 首页模板(中文版，预留)
+* /views/base/home/\_layout.htm  - 首页布局
 * 首页需跳转或更多DIY，修改控制器文件 `/views/base/_ctrls/homeCtrl.php` 内的 `homeAct()` 方法
 
 --- --- --- --- --- ---
