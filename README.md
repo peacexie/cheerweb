@@ -33,6 +33,6 @@ CheerWeb(开心企业网) v4.8 发布于 2019-05-26
 
 * 演示站：[CheerWebs/开心企业网](http://qiyeweb.dongguan.net.cn/),  
   [备用域名：http://cheerweb.txjia.com](http://cheerweb.txjia.com)
-* 在线介绍：[在线文档](http://cheerweb.txjia.com/index.php?home-tips)
+* 在线介绍：[入门文档](http://cheerweb.txjia.com/index.php?home-tips)
 * 相关网站：[贴心猫](http://imcat.txjia.com), [贴心博客](http://imblog.txjia.com), 
   [爱窝房产](http://ourhouse.txjia.com)。
