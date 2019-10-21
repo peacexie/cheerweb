@@ -13,7 +13,7 @@ $_sy_user['regchecks'] = array(
     //'sms-act' => '短信认证', // 发短信验证码-认证激活
 );
 $_sy_user['regdebug'] = '1';
-$_sy_user['regnow'] = 'sms-vcode'; // 当前使用方式
+$_sy_user['regnow'] = 'idpwd'; // 当前使用方式
 
 ### 登录类型方式
 $_sy_user['logintypes'] = array(
@@ -24,12 +24,12 @@ $_sy_user['logintypes'] = array(
     ),
     'qqcon' => array(
         'title' => 'QQ登录',
-        'open' => 1,
+        'open' => 0,
         'def' => 0,
     ),
     'weixin' => array(
         'title' => '微信登录',
-        'open' => 1,
+        'open' => 0,
         'def' => 0,
     ),
 );
