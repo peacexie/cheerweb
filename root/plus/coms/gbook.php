@@ -35,10 +35,8 @@ if(!empty($bsend)){
     $dop->fmPKey(1,0,1);
     $dop->fmProp(0,1);
     glbHtml::fmae_row(lang('vcode'),"<script>fsInit('fmcaddgbk','5,5','txt w80');</script>");
-    glbHtml::fmae_send('bsend',lang('submit'),0,'tr');
-
-    $css = ".tbdata tr td:nth-child(2){ word-wrap:break-word;word-break:break-all;white-space:normal !important; }";
-    echo basJscss::csscode($css);
+    $cls = basEnv::isMobile() ? 'tc' : 'tr';
+    glbHtml::fmae_send('bsend',lang('submit'),0,$cls);
 
 }
 
