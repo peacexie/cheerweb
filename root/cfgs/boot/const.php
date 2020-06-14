@@ -62,6 +62,8 @@ $_cbase['indoc']['debug'] = true;
 // topic
 $_cbase['topic']['tpldir'] = '/comm/topic'; 
 
+$_cbase['3aks']['baidumap'] = 'MgtgVl65h2kjZUdXi8QX71dW'; //百度地图
+
 // 多语言/多城市:实现
 $_cbase['part']['name'] = '语言'; 
 $_cbase['part']['tab'] = array(
