@@ -3,24 +3,25 @@
 {php}
 eimp('initJs','jquery;bootstrap;comm');
 eimp('initCss','bootstrap,stpub;comm;info'); 
+$_groups = read('groups');
 {/php}
 </head><body>
-{inc:"u-inc/ahead"}
-{inc:"u-inc/amenu"}
+{inc:"c_pub/ahead"}
+{inc:"c_pub/amenu"}
 
 
 <div class="row">
   <div class="col-md-9">
-    <!--div class="info-tbar">
+    <div class="info-tbar">
     <i>站点导航</i>
     <i class="right">
     <a href="#">子标题(类别)有没有</a>
     </i>
-    </div-->
+    </div>
     <div class="row">
     <!--main_start-->
 
-    {loop array('about','news','cargo') $mod}
+    {loop array('about','news','cargo','topic','keres') $mod}
     <div class="col-md-4">
     <ul class="info-nav">
       <li class="type"><a href="{surl($mod,-);}">{=$mod}:{=$_groups[$mod]['title']}</a></li>
@@ -33,11 +34,21 @@ eimp('initCss','bootstrap,stpub;comm;info');
 
     <div class="col-md-4">
     <ul class="info-nav">
+      <li class="type">user:会员操作</li>
+      <li><a href="{surl(umc:login)}">home-login</a></li>
+      <li><a href="{surl(umc:reg)}">home-apply</a></li>
+      <li><a href="{surl(company)}">会员:企业</a></li>
+      <li><a href="{surl(organize)}">会员:组织</a></li>
+      <li><a href="{surl(govern)}">会员:机构</a></li>
+    </ul>
+    </div>
+
+    <div class="col-md-4">
+    <ul class="info-nav">
     <li class="type">info:扩展信息</li>
     <li><a href="{surl(info)}">站点导航</a></li>
-
-    <li><a href="{surl(info-gbook)}">问题反馈</a></li>
-    <li><a href="{surl(about-alink)}">联系我们</a></li>
+    <li><a href="{surl(info-indep)}">部门信息</a></li>
+    <li><a href="{surl(info-umap)}">商家地图</a></li>
     </ul>
     </div>
 
@@ -49,7 +60,7 @@ eimp('initCss','bootstrap,stpub;comm;info');
   </div>
 </div>
 
-{inc:"u-inc/afoot"} 
+{inc:"c_pub/afoot"} 
 
 </body></html>
 

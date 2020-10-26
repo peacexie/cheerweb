@@ -1,21 +1,16 @@
 <?php
 namespace imcat;
 $isMobile = basEnv::isMobile();
-$vcfg = vopTpls::etr1('tpl'); unset($vcfg['base'],$vcfg['adm']);  
+$vcfg = vopTpls::etr1('tpl');
 $title = $_cbase['sys_name'];
+$icons = array('umc'=>'user', 'comm'=>'laptop','mob'=>'mobile','dev'=>'book','doc'=>'book');
+foreach($vcfg as $vk => $vv) {
+    if(!isset($icons[$vk])){ unset($vcfg[$vk]); }
+}
 
-$_dtab = array(
-    'adm' => 'Your website controlled by you!', 
-    'comm' => '开心企业网', 
-    'ven' => 'Cheer Website for Enterprise', 
-    'vfr' => 'Joyeux Site Web', 
-    'vru' => 'радостный сайт предприятия', 
-    'ves' => 'Alegre Página web', 
-    'vjp' => '嬉しい企業サイト', 
-    'vkr' => '즐겁다기업 사이트',
-);
+$lang = $this->key ? $this->key : (empty($lang) ? 'cn' : $lang);
 
-$_mdtab = array('about','start','tpdiy','mlang','info1','info2');
+$_mdtab = array('about','start','tpdiy');
 $texts = array();
 if($this->key=='tips'){
     foreach ($_mdtab as $mdk) {
